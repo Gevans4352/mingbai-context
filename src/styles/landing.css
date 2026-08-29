@@ -1,0 +1,191 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&display=swap');
+
+.landing-wrap {
+  position: fixed;
+  inset: 0;
+  background: var(--color-paper);
+  border: var(--border-width) solid var(--color-border);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  z-index: 100;
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  padding: 1rem; /* Adds breathing room on all sides */
+}
+
+.landing-exit {
+  opacity: 0;
+  transform: scale(1.05);
+}
+
+/* The Floating Fancy Emojis */
+.landing-constellation {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.landing-emoji {
+  position: absolute;
+  font-size: clamp(1rem, 3vw, 1.5rem); /* Scales down on mobile */
+  color: var(--color-olive);
+  opacity: 0;
+  animation: floatEmoji infinite ease-in-out;
+  text-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+
+@keyframes floatEmoji {
+  0% { transform: translateY(20px) rotate(0deg); opacity: 0; }
+  20% { opacity: 0.8; }
+  80% { opacity: 0.6; }
+  100% { transform: translateY(-20px) rotate(360deg); opacity: 0; }
+}
+
+/* The Centerpiece Layout */
+.landing-center {
+  position: relative;
+  display: flex;
+  flex-direction: row; /* Desktop: Side by side */
+  align-items: center;
+  justify-content: center;
+  gap: clamp(2rem, 8vw, 6rem); /* Responsive gap */
+  max-width: 1200px;
+  width: 100%;
+  padding: 2rem;
+}
+
+.landing-label {
+  position: absolute;
+  top: -2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: 'Courier New', monospace;
+  font-size: 0.8rem;
+  letter-spacing: 0.2em;
+  color: var(--color-border);
+  font-weight: bold;
+}
+
+/* The Giant Calligraphy Scroll */
+.landing-scroll {
+  display: flex;
+  flex-direction: column;
+  transform: rotate(-4deg);
+  gap: 0.5rem;
+}
+
+.landing-char {
+  font-family: 'Ma Shan Zheng', cursive;
+  /* Fluid Font Size: 3rem on mobile, 5rem on desktop */
+  font-size: clamp(3rem, 10vw, 5rem); 
+  line-height: 1.1;
+  color: var(--color-ink);
+  background: linear-gradient(90deg, var(--color-ink) 0%, #000 50%, var(--color-ink) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  filter: contrast(1.1);
+}
+
+/* The Accent Text */
+.landing-title-block {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  max-width: 400px;
+  text-align: left; /* Desktop: Left aligned */
+}
+
+.landing-title {
+  font-family: var(--font-emphasis);
+  font-size: clamp(2.5rem, 8vw, 4rem); /* Fluid Font Size */
+  font-weight: 900;
+  line-height: 0.9;
+  letter-spacing: -0.02em;
+  color: var(--color-ink);
+}
+
+.landing-accent {
+  color: var(--color-red);
+}
+
+.landing-subtitle {
+  font-family: 'Courier New', monospace;
+  font-size: clamp(0.85rem, 2.5vw, 0.95rem);
+  color: var(--color-olive);
+  letter-spacing: 0.05em;
+  line-height: 1.6;
+}
+
+/* The Call to Action Button */
+.landing-button {
+  background: transparent;
+  border: 2px solid var(--color-ink);
+  color: var(--color-ink);
+  font-family: 'Courier New', monospace;
+  font-weight: bold;
+  font-size: 1rem;
+  padding: 1rem 2rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 1rem;
+}
+
+.landing-button:hover {
+  background: var(--color-ink);
+  color: var(--color-paper);
+}
+
+.button-arrow {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.landing-button:hover .button-arrow {
+  transform: translateX(5px);
+}
+
+/* Footer Elements */
+.landing-footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  border-top: var(--border-width) solid var(--color-border);
+  font-family: 'Courier New', monospace;
+  font-size: 0.8rem;
+  color: var(--color-olive);
+}
+
+/* =========================================
+   MOBILE & TABLET RESPONSIVENESS
+   ========================================= */
+@media (max-width: 900px) {
+  .landing-center {
+    flex-direction: column; /* Normal stacking */
+    gap: 2rem;
+    text-align: center;
+  }
+
+  /* HIDE THE CHINESE CHARACTERS ON MOBILE */
+  .landing-scroll {
+    display: none; 
+  }
+
+  .landing-title-block {
+    text-align: center;
+    align-items: center;
+  }
+  .landing-title br {
+    display: none;
+  }
+  .landing-footer {
+    padding: 0.5rem 1rem;
+    font-size: 0.7rem;
+  }
+}

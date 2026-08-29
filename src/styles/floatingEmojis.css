@@ -1,0 +1,47 @@
+.floating-symbols {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.floating-symbol {
+  position: absolute;
+  top: 100%;
+  font-size: 1.3rem;
+  color: var(--color-olive);
+  opacity: 0.35;
+  animation-name: floatUp;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+[data-theme="genz"] .floating-symbol {
+  color: var(--color-yellow-dim);
+  opacity: 0.5;
+}
+
+@keyframes floatUp {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-110vh) rotate(20deg);
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .floating-symbol {
+    animation: none;
+    display: none;
+  }
+}

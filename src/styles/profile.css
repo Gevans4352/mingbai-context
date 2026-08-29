@@ -1,0 +1,101 @@
+.profile-page {
+  display: flex;
+  gap: 2.5rem;
+  padding: 1.5rem 2.5rem 3rem;
+  align-items: flex-start;
+}
+
+.profile-main {
+  flex: 1;
+  min-width: 0;
+}
+
+.profile-byline {
+  font-family: var(--font-body);
+  font-style: italic;
+  color: var(--color-olive);
+  margin-top: 0.5rem;
+  font-size: 1rem;
+}
+
+/* pinterest-style masonry using CSS columns */
+.masonry-grid {
+  columns: 2;
+  column-gap: 1.2rem;
+  margin-top: 1rem;
+}
+
+.masonry-card {
+  break-inside: avoid;
+  margin-bottom: 1.2rem;
+  max-width: 380px;
+}
+
+/* wikipedia-style infobox */
+.infobox {
+  width: 260px;
+  flex-shrink: 0;
+  background: var(--color-paper);
+  border: var(--border-width) solid var(--color-border);
+  box-shadow: var(--shadow-hard);
+  padding: 1rem;
+  position: sticky;
+  top: 1.5rem;
+}
+
+.infobox-title {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  text-align: center;
+  border-bottom: var(--border-width) solid var(--color-border);
+  padding-bottom: 0.6rem;
+  margin-bottom: 0.6rem;
+}
+
+.infobox-row {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.infobox-label {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-olive);
+}
+
+.infobox-value {
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+}
+
+.infobox-actions {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.8rem;
+}
+
+.infobox button,
+.infobox-actions button {
+  font-size: 0.7rem;
+  padding: 0.5rem 0.9rem;
+  width: 100%;
+}
+
+@media (max-width: 800px) {
+  .profile-page {
+    flex-direction: column;
+  }
+  .infobox {
+    width: 100%;
+    position: static;
+  }
+  .masonry-grid {
+    columns: 1;
+  }
+}
