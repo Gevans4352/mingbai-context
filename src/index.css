@@ -1,0 +1,907 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Archivo+Expanded:wght@600;700;800&family=Space+Grotesk:wght@400;500;600&family=Courier+Prime&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&display=swap");
+/* =========================================================
+   PERSONAL ARCHIVE / SCRAPBOOK SYSTEM
+   Inspired by nostalgic personal-web layouts
+   ========================================================= */
+
+:root {
+  /* ---------- palette ---------- */
+
+  --color-bg: #e8dfce;
+  --color-paper: #f5eddf;
+  --color-paper-dark: #ddd2bd;
+
+  --color-ink: #17130f;
+  --color-black: #0d0b09;
+
+  --color-olive: #565638;
+  --color-olive-deep: #343421;
+
+  --color-burgundy: #762f32;
+  --color-burgundy-dark: #542124;
+
+  --color-yellow: #d6aa32;
+  --color-yellow-soft: #e3c96f;
+
+  --color-border: var(--color-ink);
+
+  /* ---------- typography ---------- */
+
+  --font-display: "Bebas Neue", sans-serif;
+  --font-emphasis: "Archivo Expanded", sans-serif;
+  --font-body: "Space Grotesk", sans-serif;
+  --font-mono: "Courier Prime", monospace;
+
+  /* ---------- layout ---------- */
+
+  --radius: 0px;
+  --border-width: 1px;
+
+  --shadow-hard: 5px 5px 0 var(--color-ink);
+  --shadow-small: 3px 3px 0 var(--color-ink);
+
+  --transition-mode: 0.35s ease;
+  --transition-fast: 0.18s ease;
+
+  --mark-heading: "⋆˚࿔";
+  --mark-section: "╰┈➤";
+
+  --accent: var(--color-burgundy);
+}
+
+/* =========================================================
+   GEN Z / DARK ARCHIVE
+   ========================================================= */
+
+[data-theme="genz"] {
+  --color-bg: #100e0b;
+  --color-paper: #191612;
+  --color-paper-dark: #252018;
+
+  --color-ink: #eee5d5;
+  --color-black: #050403;
+
+  --color-olive: #a2a174;
+  --color-olive-deep: #77784e;
+
+  --color-burgundy: #b85a5b;
+  --color-burgundy-dark: #7c383a;
+
+  --color-yellow: #e1b735;
+  --color-yellow-soft: #c9a638;
+
+  --color-border: #eee5d5;
+
+  --accent: var(--color-yellow);
+
+  --shadow-hard: 5px 5px 0 var(--color-yellow);
+  --shadow-small: 3px 3px 0 var(--color-yellow);
+
+  --mark-heading: "⋆˚࿔ 𐙚 ✦";
+  --mark-section: "╰┈➤";
+}
+
+/* =========================================================
+   RESET
+   ========================================================= */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+
+  background-color: var(--color-bg);
+
+  /* subtle paper grain */
+  background-image: radial-gradient(
+    var(--color-ink) 0.45px,
+    transparent 0.45px
+  );
+
+  background-size: 13px 13px;
+
+  color: var(--color-ink);
+
+  font-family: var(--font-body);
+
+  transition:
+    background-color var(--transition-mode),
+    color var(--transition-mode);
+}
+
+/* =========================================================
+   NAVIGATION
+   ========================================================= */
+
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 2rem;
+
+  padding: 1rem 2.5rem;
+
+  background: var(--color-paper);
+
+  border-bottom: var(--border-width) solid var(--color-border);
+
+  /* slight archival feel */
+  box-shadow: 0 3px 0 var(--color-black);
+
+  transition:
+    background var(--transition-mode),
+    color var(--transition-mode);
+}
+
+nav a {
+  position: relative;
+
+  color: var(--color-ink);
+
+  text-decoration: none;
+
+  font-family: var(--font-mono);
+
+  font-size: 0.72rem;
+
+  letter-spacing: 0.08em;
+
+  text-transform: uppercase;
+
+  transition: color var(--transition-fast);
+}
+
+nav a::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  bottom: -4px;
+
+  width: 0;
+  height: 1px;
+
+  background: var(--accent);
+
+  transition: width var(--transition-fast);
+}
+
+nav a:hover {
+  color: var(--accent);
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+/* =========================================================
+   SECTION LABEL
+   ========================================================= */
+
+.section-label {
+  display: flex;
+  align-items: center;
+
+  gap: 0.7rem;
+
+  margin: 2.5rem 2.5rem 0;
+
+  font-family: var(--font-mono);
+
+  font-size: 0.68rem;
+
+  letter-spacing: 0.1em;
+
+  text-transform: uppercase;
+
+  color: var(--color-olive);
+}
+
+.section-label::before {
+  content: var(--mark-section);
+
+  color: var(--accent);
+
+  font-size: 0.9rem;
+}
+
+/* =========================================================
+   MAIN TITLE
+   ========================================================= */
+
+h1 {
+  position: relative;
+
+  max-width: 1100px;
+
+  padding: 0.8rem 2.5rem 1rem;
+
+  color: var(--color-ink);
+
+  font-family: var(--font-display);
+
+  font-size: clamp(4rem, 10vw, 8.5rem);
+
+  line-height: 0.82;
+
+  letter-spacing: -0.015em;
+
+  text-transform: uppercase;
+}
+
+/* tiny decorative archive mark */
+
+h1::after {
+  content: var(--mark-heading);
+
+  display: block;
+
+  margin-top: 1rem;
+
+  color: var(--accent);
+
+  font-family: var(--font-body);
+
+  font-size: 0.95rem;
+
+  letter-spacing: 0.12em;
+
+  text-transform: none;
+}
+
+/* accent word */
+
+h1 .accent {
+  color: var(--color-burgundy);
+
+  position: relative;
+}
+
+[data-theme="genz"] h1 .accent {
+  color: var(--color-yellow);
+}
+
+/* =========================================================
+   CHINESE / EMPHASIS TEXT
+   ========================================================= */
+
+.zh-text {
+  font-family: var(--font-emphasis);
+
+  font-weight: 800;
+
+  letter-spacing: -0.03em;
+}
+
+/* =========================================================
+   GENERIC TEXT
+   ========================================================= */
+
+p {
+  line-height: 1.7;
+}
+.history-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  padding: 1.5rem 2.5rem 3rem;
+  padding-right: calc(2.5rem + 220px);
+}
+
+.see-more-wrap {
+  display: flex;
+  justify-content: center;
+  padding: 1rem 0 3rem;
+}
+
+.see-more-wrap button {
+  background: transparent;
+  box-shadow: none;
+}
+
+.see-more-wrap button:hover {
+  transform: none;
+  box-shadow: var(--shadow-hard);
+}
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 1rem 0 3rem;
+}
+
+.pagination button {
+  min-width: 2.4rem;
+  padding: 0.5rem;
+  background: var(--color-paper);
+}
+
+.pagination button.page-active {
+  background: var(--color-red);
+  color: var(--color-paper);
+}
+
+.pagination button:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+.pinyin {
+  font-family: var(--font-mono);
+  color: var(--color-olive);
+  font-size: 0.85rem;
+  margin: 0.3rem 0 0.8rem;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.date-label {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--color-olive);
+  text-transform: uppercase;
+}
+
+.card-footer button {
+  padding: 0.4rem 0.9rem;
+  font-size: 0.65rem;
+  box-shadow: none;
+}
+
+.expanded-context {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: var(--border-width) solid var(--color-border);
+  font-style: italic;
+}
+@media (max-width: 700px) {
+  .history-grid {
+    grid-template-columns: 1fr;
+    max-height: 60vh;
+    overflow-y: auto;
+    padding-right: 0.5rem;
+  }
+}
+.vs-wrap {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 280px;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  gap: 1.5rem;
+  padding: 0 1.5rem;
+  overflow: hidden;
+  background: var(--color-paper);
+  border-left: var(--border-width) solid var(--color-border);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.vs-column {
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+  width: 3.4rem;
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    transparent 0%,
+    black 12%,
+    black 88%,
+    transparent 100%
+  );
+  mask-image: linear-gradient(
+    to bottom,
+    transparent 0%,
+    black 12%,
+    black 88%,
+    transparent 100%
+  );
+}
+
+.vs-column-inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transform: rotate(-3deg);
+  animation-name: vsScroll;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: 1;
+  animation-fill-mode: both;
+}
+
+/* --- BASE SOLID COLORS (GUARANTEED VISIBILITY) --- */
+.vs-char {
+  font-family: "Ma Shan Zheng", var(--font-emphasis);
+  font-size: 3rem;
+  line-height: 1.8;
+
+  /* Light Mode: Deep, high-contrast charcoal ink */
+  color: #232323;
+  opacity: 1; /* Fully opaque! No faintness. */
+
+  /* Organic imperfections */
+  margin-top: calc(2px + (var(--char-index) * 1.5px));
+  margin-bottom: calc(-2px + (var(--char-index) * 0.5px));
+  transform: translateX(calc(-1px + (var(--char-index) * 0.8px)));
+}
+
+/* Dark Mode / Gen-Z Theme: Bright warm cream/gold ink */
+[data-theme="genz"] .vs-char,
+[data-theme="dark"] .vs-char {
+  color: #fffbe6;
+}
+
+/* --- ADVANCED INK EFFECT (Only applied if browser supports it safely) --- */
+@supports (-webkit-background-clip: text) or (background-clip: text) {
+  .vs-char {
+    /* Dark ink gradient with varied density */
+    background-image: linear-gradient(
+      90deg,
+      #232323 0%,
+      #000000 50%,
+      #232323 100%
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  [data-theme="genz"] .vs-char,
+  [data-theme="dark"] .vs-char {
+    /* Bright gold gradient with varied density */
+    background-image: linear-gradient(
+      90deg,
+      #fffbe6 0%,
+      #ffc107 50%,
+      #fffbe6 100%
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+}
+
+@keyframes vsScroll {
+  0% {
+    transform: translateY(-100%) rotate(-3deg);
+  }
+  100% {
+    transform: translateY(100%) rotate(-3deg);
+  }
+}
+
+@media (max-width: 900px) {
+  .vs-wrap {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .vs-column-inner {
+    animation: none;
+    position: static;
+    opacity: 1;
+    transform: none;
+  }
+}
+@media (max-width: 700px) {
+  .history-grid {
+    grid-template-columns: 1fr;
+  }
+}
+small {
+  font-family: var(--font-mono);
+
+  font-size: 0.65rem;
+
+  letter-spacing: 0.06em;
+
+  text-transform: uppercase;
+
+  color: var(--color-olive);
+}
+
+/* =========================================================
+   BUTTONS
+   ========================================================= */
+
+button {
+  position: relative;
+
+  background: var(--color-paper);
+
+  color: var(--color-ink);
+
+  border: var(--border-width) solid var(--color-border);
+
+  padding: 0.75rem 1.35rem;
+
+  border-radius: 0;
+
+  cursor: pointer;
+
+  font-family: var(--font-mono);
+
+  font-weight: 700;
+
+  font-size: 0.72rem;
+
+  letter-spacing: 0.08em;
+
+  text-transform: uppercase;
+
+  box-shadow: var(--shadow-small);
+
+  transition:
+    transform var(--transition-fast),
+    box-shadow var(--transition-fast),
+    background var(--transition-fast),
+    color var(--transition-fast);
+}
+
+button:hover {
+  transform: translate(-3px, -3px);
+
+  box-shadow: var(--shadow-hard);
+
+  background: var(--accent);
+
+  color: var(--color-paper);
+}
+
+button:active {
+  transform: translate(0, 0);
+
+  box-shadow: 1px 1px 0 var(--color-black);
+}
+
+/* =========================================================
+   LINKS
+   ========================================================= */
+
+a {
+  color: inherit;
+}
+
+a:not(nav a) {
+  text-underline-offset: 3px;
+}
+
+/* =========================================================
+   INPUTS
+   ========================================================= */
+
+input,
+select {
+  width: 100%;
+
+  margin: 0.4rem 0;
+
+  padding: 0.8rem 0.9rem;
+
+  background: var(--color-paper);
+
+  color: var(--color-ink);
+
+  border: var(--border-width) solid var(--color-border);
+
+  border-radius: 0;
+
+  font-family: var(--font-body);
+
+  font-size: 0.9rem;
+
+  transition:
+    box-shadow var(--transition-fast),
+    transform var(--transition-fast);
+}
+
+input::placeholder {
+  color: var(--color-olive);
+}
+
+input:focus,
+select:focus {
+  outline: none;
+
+  transform: translate(-2px, -2px);
+
+  box-shadow: var(--shadow-small);
+}
+
+/* =========================================================
+   FORMS + CARDS
+   ========================================================= */
+
+form,
+.card {
+  position: relative;
+
+  background: var(--color-paper);
+
+  border: var(--border-width) solid var(--color-border);
+
+  border-radius: 0;
+
+  box-shadow: var(--shadow-hard);
+
+  padding: 1.7rem;
+
+  max-width: 440px;
+
+  margin: 2rem;
+
+  transition:
+    transform var(--transition-fast),
+    box-shadow var(--transition-fast);
+}
+
+/*
+  little scrapbook corner
+*/
+
+.card::before,
+form::before {
+  content: "";
+
+  position: absolute;
+
+  top: -1px;
+  right: 18px;
+
+  width: 35px;
+  height: 7px;
+
+  background: var(--accent);
+
+  transform: rotate(1deg);
+}
+
+.card:hover {
+  transform: translate(-3px, -3px);
+
+  box-shadow: 8px 8px 0 var(--color-black);
+}
+
+form {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 0.55rem;
+}
+
+/* =========================================================
+   LABELS
+   ========================================================= */
+
+label {
+  font-family: var(--font-mono);
+
+  font-size: 0.65rem;
+
+  letter-spacing: 0.08em;
+
+  text-transform: uppercase;
+
+  color: var(--color-olive);
+}
+
+/* =========================================================
+   TAGS
+   ========================================================= */
+
+.tag {
+  display: inline-block;
+
+  margin: 0.2rem;
+
+  padding: 0.3rem 0.65rem;
+
+  background: transparent;
+
+  color: var(--color-ink);
+
+  border: var(--border-width) solid var(--color-border);
+
+  border-radius: 0;
+
+  font-family: var(--font-mono);
+
+  font-size: 0.62rem;
+
+  letter-spacing: 0.06em;
+
+  text-transform: uppercase;
+
+  transition:
+    background var(--transition-fast),
+    color var(--transition-fast),
+    transform var(--transition-fast);
+}
+
+.tag:hover {
+  background: var(--color-ink);
+
+  color: var(--color-paper);
+
+  transform: rotate(-1deg);
+}
+
+/* =========================================================
+   SCRAPBOOK / ARCHIVE HELPERS
+   ========================================================= */
+
+/* Add this class to little metadata pieces */
+
+.archive-meta {
+  font-family: var(--font-mono);
+
+  font-size: 0.62rem;
+
+  letter-spacing: 0.09em;
+
+  text-transform: uppercase;
+
+  color: var(--color-olive);
+}
+
+/* handwritten-looking note */
+
+.archive-note {
+  display: inline-block;
+
+  padding: 0.55rem 0.8rem;
+
+  background: var(--color-yellow-soft);
+
+  color: var(--color-black);
+
+  font-family: var(--font-body);
+
+  font-size: 0.75rem;
+
+  transform: rotate(-1.5deg);
+}
+
+/* oversized number */
+
+.archive-number {
+  font-family: var(--font-display);
+
+  font-size: 5rem;
+
+  line-height: 0.8;
+
+  color: var(--color-burgundy);
+
+  opacity: 0.9;
+}
+
+[data-theme="genz"] .archive-number {
+  color: var(--color-yellow);
+}
+
+/* divider */
+
+.archive-divider {
+  width: calc(100% - 5rem);
+
+  height: 1px;
+
+  margin: 2rem 2.5rem;
+
+  background: var(--color-border);
+
+  opacity: 0.55;
+}
+
+/* =========================================================
+   SELECTION
+   ========================================================= */
+
+::selection {
+  background: var(--accent);
+
+  color: var(--color-paper);
+}
+
+/* =========================================================
+   SCROLLBAR
+   ========================================================= */
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-ink);
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 700px) {
+  nav {
+    padding: 0.9rem 1.2rem;
+
+    gap: 1rem;
+
+    overflow-x: auto;
+  }
+
+  nav a {
+    white-space: nowrap;
+  }
+
+  .section-label {
+    margin-left: 1.2rem;
+    margin-right: 1.2rem;
+  }
+
+  h1 {
+    padding-left: 1.2rem;
+    padding-right: 1.2rem;
+
+    font-size: clamp(3.5rem, 18vw, 6rem);
+  }
+
+  form,
+  .card {
+    margin: 1.2rem;
+
+    padding: 1.3rem;
+  }
+
+  .archive-divider {
+    width: calc(100% - 2.4rem);
+
+    margin-left: 1.2rem;
+    margin-right: 1.2rem;
+  }
+}
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition: none !important;
+
+    scroll-behavior: auto !important;
+  }
+}
