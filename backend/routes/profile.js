@@ -1,0 +1,44 @@
+import express from "express";
+import { pool } from "../db/pool.js";
+import { requireAuth } from "../middleware/requireauth.js";
+
+const router = express.Router();
+
+router.get("/profile", requireAuth, async (req, res) => {
+  try {
+    const result = await pool.query(
+      `SELECT name, email, country, default_register FROM users WHERE id = $1`,
+      [req.user.id],
+    );
+
+    if (result.rows.length === 0) {
+      return res.status(404).json({ error: "User not found" });
+    }
+
+    res.json(result.rows[0]);
+  } catch (err) {
+    console.error("Profile fetch error:", err);
+    res.status(500).json({ error: "Something went wrong fetching profile" });
+  }
+});
+
+router.patch("/profile", requireAuth, async (req, res) => {
+  const { name, email, country, default_register } = req.body;
+
+  try {
+    const result = await pool.query(
+      `UPDATE users
+       SET name = $1, email = $2, country = $3, default_register = $4
+       WHERE id = $5
+       RETURNING name, email, country, default_register`,
+      [name, email, country, default_register, req.user.id],
+    );
+
+    res.json(result.rows[0]);
+  } catch (err) {
+    console.error("Profile update error:", err);
+    res.status(500).json({ error: "Something went wrong updating profile" });
+  }
+});
+
+export default router;
