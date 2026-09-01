@@ -4,8 +4,8 @@ dotenv.config();
 
 const genAI = new GoogleGenAI({ apiKey: process.env.API_KEY });
 
-export async function decodePhrase(phrase, register) {
-  const prompt = buildPrompt(phrase, register);
+export async function decodePhrase(phrase, register, mode = "standard") {
+  const prompt = buildPrompt(phrase, register, mode);
   const result = await genAI.models.generateContent({
     model: "gemini-3.6-flash",
     contents: prompt,
@@ -14,13 +14,16 @@ export async function decodePhrase(phrase, register) {
   return parseResponse(text);
 }
 
-function buildPrompt(phrase, register) {
-  const voice =
+function buildPrompt(phrase, register, mode) {
+  let voice =
     register === "genz"
       ? "casual, playful, Gen Z internet voice like explaining to a friend over text"
       : "clear, neutral, and informative like a well-written reference explanation";
-
-  return `
+  if (mode === "meme") {
+    voice =
+      "hilarious, chaotic, meme-savvy internet dweller explaining with humor and cultural references";
+  }
+  let instruction = `
 You are an expert on Chinese internet culture, slang, and idioms.
 
 Analyze this phrase: "${phrase}"
@@ -29,7 +32,20 @@ Write your explanation in a ${voice} tone for the "natural", "example", and "cul
 Keep "literal" and "pinyin" accurate and neutral regardless of tone.
 Keep "cultural_context" to 2-3 sentences maximum.
 Choose 1-3 tags from this exact list only: dramatic, sarcastic, wholesome, memeable, formal, chaotic, resigned, playful.
+`;
+  if (mode === "meme") {
+    instruction += `
+This is MEME MODE. Focus heavily on internet memes, viral trends, and how this phrase is used in memes.
+Explain the meme origin, the irony, and why it's funny. Use Gen Z slang and emoji-like expressions in your explanation.
+The "example" should be a meme-worthy scenario.
+`;
+  } else {
+    instruction += `
+This is STANDARD MODE. Provide a clear, informative breakdown suitable for learning.
+`;
+  }
 
+  instruction += `
 Respond with ONLY valid JSON, no markdown formatting, no backticks, in exactly this shape:
 
 {
@@ -46,6 +62,8 @@ Respond with ONLY valid JSON, no markdown formatting, no backticks, in exactly t
   "cultural_context": "brief cultural explanation"
 }
 `;
+
+  return instruction;
 }
 
 function parseResponse(text) {
