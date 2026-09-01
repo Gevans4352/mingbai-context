@@ -2,7 +2,6 @@ import express from "express";
 import cors from "cors";
 import dotenv from "dotenv";
 import decodeRoute from "./routes/decode.js";
-import { decodePhrase } from "./services/ai.js";
 import profileRoute from "./routes/profile.js";
 import authRoute from "./routes/auth.js";
 import phrasesRoute from "./routes/phrases.js";
