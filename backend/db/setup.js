@@ -35,6 +35,12 @@ async function setup() {
       ALTER TABLE users ADD COLUMN IF NOT EXISTS default_register text DEFAULT 'formal';
     `);
     console.log("default_register column added (or already existed)");
+    await pool.query(`
+      CREATE INDEX IF NOT EXISTS idx_saved_phrases_input ON saved_phrases(input);
+    `);
+    await pool.query(`
+      ALTER TABLE saved_phrases ADD COLUMN IF NOT EXISTS mode TEXT DEFAULT 'standard';
+    `)
   } catch (err) {
     console.error("Setup failed:", err);
   } finally {
