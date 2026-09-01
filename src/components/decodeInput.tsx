@@ -16,11 +16,18 @@ function DecodeInput({ onDecode, register }: DecodeInputProps) {
 
     setLoading(true);
     try {
+      // Derive mode from register
+      const mode = register === "genz" ? "meme" : "standard";
+
       const response = await fetch("http://localhost:5000/api/decode", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         credentials: "include",
-        body: JSON.stringify({ phrase, register }),
+        body: JSON.stringify({
+          phrase,
+          register,
+          mode, // <-- now derived, not from state
+        }),
       });
 
       if (!response.ok) {
