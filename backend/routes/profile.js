@@ -3,19 +3,39 @@ import { pool } from "../db/pool.js";
 import { requireAuth } from "../middleware/requireauth.js";
 
 const router = express.Router();
-
 router.get("/profile", requireAuth, async (req, res) => {
   try {
-    const result = await pool.query(
+    const userResult = await pool.query(
       `SELECT name, email, country, default_register FROM users WHERE id = $1`,
       [req.user.id],
     );
 
-    if (result.rows.length === 0) {
+    if (userResult.rows.length === 0) {
       return res.status(404).json({ error: "User not found" });
     }
 
-    res.json(result.rows[0]);
+    const user = userResult.rows[0];
+    const statsResult = await pool.query(
+      `SELECT COUNT(*) as total_decodes FROM saved_phrases WHERE user_id = $1`,
+      [req.user.id],
+    );
+    const tagResult = await pool.query(
+      `SELECT UNNEST(tags) as tag, COUNT(*) 
+       FROM saved_phrases 
+       WHERE user_id = $1 
+       GROUP BY tag 
+       ORDER BY count DESC 
+       LIMIT 1`,
+      [req.user.id],
+    );
+
+    const total_decodes = parseInt(statsResult.rows[0].total_decodes);
+    const top_tag = tagResult.rows[0]?.tag || null;
+    res.json({
+      ...user,
+      total_decodes,
+      top_tag,
+    });
   } catch (err) {
     console.error("Profile fetch error:", err);
     res.status(500).json({ error: "Something went wrong fetching profile" });
