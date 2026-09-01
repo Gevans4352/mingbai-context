@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import "../styles/profile.css"
+import "../styles/profile.css";
 import FloatingEmojis from "../components/floatingEmojis";
 
 interface ProfileData {
@@ -7,6 +7,8 @@ interface ProfileData {
   email: string;
   country: string;
   default_register: "genz" | "formal";
+  total_decodes: number; 
+  top_tag: string | null; 
 }
 
 interface HistoryItem {
@@ -58,16 +60,30 @@ function Profile() {
     if (!form) return;
     setSaving(true);
     try {
+      const payload = {
+        name: form.name,
+        email: form.email,
+        country: form.country,
+        default_register: form.default_register,
+      };
       const res = await fetch("http://localhost:5000/api/profile", {
         method: "PATCH",
         headers: { "Content-Type": "application/json" },
         credentials: "include",
-        body: JSON.stringify(form),
+        body: JSON.stringify(payload),
       });
       if (res.ok) {
         const updated = await res.json();
-        setProfile(updated);
-        setForm(updated);
+        setProfile((prev) => ({
+          ...updated,
+          total_decodes: prev?.total_decodes ?? 0,
+          top_tag: prev?.top_tag ?? null,
+        }));
+        setForm((prev) => ({
+          ...updated,
+          total_decodes: prev?.total_decodes ?? 0,
+          top_tag: prev?.top_tag ?? null,
+        }));
         setEditing(false);
       }
     } catch (err) {
@@ -183,6 +199,14 @@ function Profile() {
               {profile.default_register === "genz" ? "Gen Z" : "Formal"}
             </span>
           )}
+        </div>
+        <div className="infobox-row">
+          <span className="infobox-label">Decodes</span>
+          <span className="infobox-value">{profile.total_decodes}</span>
+        </div>
+        <div className="infobox-row">
+          <span className="infobox-label">Top Tag</span>
+          <span className="infobox-value">{profile.top_tag || "—"}</span>
         </div>
 
         {editing ? (
