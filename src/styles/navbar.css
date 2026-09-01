@@ -99,3 +99,12 @@
     display: block;
   }
 }
+
+.logout{
+  color: var(--color-ink);
+    text-decoration: none;
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
