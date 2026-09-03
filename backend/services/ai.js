@@ -32,6 +32,7 @@ Write your explanation in a ${voice} tone for the "natural", "example", and "cul
 Keep "literal" and "pinyin" accurate and neutral regardless of tone.
 Keep "cultural_context" to 2-3 sentences maximum.
 Choose 1-3 tags from this exact list only: dramatic, sarcastic, wholesome, memeable, formal, chaotic, resigned, playful.
+If genuinely relevant, include up to 2 short related cultural terms in "related_culture" (e.g. a festival, custom, or concept connected to this phrase's meaning) — each with the term, its pinyin, and a one-sentence note. Only include this field if there's a real, non-forced connection. Omit it entirely if nothing fits.
 `;
   if (mode === "meme") {
     instruction += `
@@ -54,6 +55,9 @@ Respond with ONLY valid JSON, no markdown formatting, no backticks, in exactly t
   "literal": "literal word-for-word translation",
   "natural": "natural English meaning",
   "tags": ["tag1", "tag2"],
+  "related_culture": [
+  { "term": "春节", "pinyin": "chūn jié", "note": "one sentence connecting it to this phrase" }
+  ]
   "example": {
     "scenario": "a short relatable situation",
     "usage": "how the phrase would be used in that situation",
