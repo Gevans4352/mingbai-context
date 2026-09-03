@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import BackButton from "../components/backButton";
 
 interface HistoryItem {
   id: string;
@@ -85,48 +86,62 @@ function History() {
 
   return (
     <div>
+      <BackButton />
       <p className="section-label">02 / History</p>
       <h1>
         Your <span className="accent">Archive.</span>
       </h1>
 
-      {loading && <p className="section-label">Loading...</p>}
+      {loading && (
+        <div className="history-grid">
+          {[1, 2, 3, 4].map((i) => (
+            <div className="skeleton-card" key={i}>
+              <div className="skeleton-line short"></div>
+              <div className="skeleton-line medium"></div>
+              <div className="skeleton-line long"></div>
+              <div className="skeleton-line medium"></div>
+            </div>
+          ))}
+        </div>
+      )}
 
       {!loading && items.length === 0 && (
         <p className="section-label">No decoded phrases yet.</p>
       )}
 
-      <div className="history-grid">
-        {items.map((item) => (
-          <div className="card" key={item.id}>
-            <p className="zh-text">{item.input}</p>
-            <p className="pinyin">{item.pinyin}</p>
+      {!loading && items.length > 0 && (
+        <div className="history-grid">
+          {items.map((item) => (
+            <div className="card" key={item.id}>
+              <p className="zh-text">{item.input}</p>
+              <p className="pinyin">{item.pinyin}</p>
 
-            <div>
-              {item.tags.map((tag) => (
-                <span className="tag" key={tag}>
-                  {tag}
+              <div>
+                {item.tags.map((tag) => (
+                  <span className="tag" key={tag}>
+                    {tag}
+                  </span>
+                ))}
+              </div>
+
+              <p>{item.natural}</p>
+
+              <div className="card-footer">
+                <span className="date-label">
+                  {new Date(item.created_at).toLocaleDateString()}
                 </span>
-              ))}
+                <button onClick={() => toggleExpand(item.id)}>
+                  {expandedId === item.id ? "collapse" : "expand"}
+                </button>
+              </div>
+
+              {expandedId === item.id && (
+                <p className="expanded-context">{item.cultural_context}</p>
+              )}
             </div>
-
-            <p>{item.natural}</p>
-
-            <div className="card-footer">
-              <span className="date-label">
-                {new Date(item.created_at).toLocaleDateString()}
-              </span>
-              <button onClick={() => toggleExpand(item.id)}>
-                {expandedId === item.id ? "collapse" : "expand"}
-              </button>
-            </div>
-
-            {expandedId === item.id && (
-              <p className="expanded-context">{item.cultural_context}</p>
-            )}
-          </div>
-        ))}
-      </div>
+          ))}
+        </div>
+      )}
 
       {!loading && totalPages > 1 && (
         <div className="pagination">
