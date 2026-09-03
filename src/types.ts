@@ -10,4 +10,9 @@ export interface DecodeResult {
     meaning_here: string;
   };
   cultural_context: string;
+  related_culture?:{
+    term: string;
+    pinyin: string;
+    note: string;
+  }[];
 }
