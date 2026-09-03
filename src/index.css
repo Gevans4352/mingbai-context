@@ -347,6 +347,85 @@ p {
   font-size: 0.85rem;
   margin: 0.3rem 0 0.8rem;
 }
+.skeleton-card {
+  background: var(--color-paper);
+  border: var(--border-width) solid var(--color-border);
+  box-shadow: var(--shadow-hard);
+  padding: 1.8rem;
+  max-width: 440px;
+  margin: 2rem;
+}
+
+.skeleton-line {
+  height: 0.9rem;
+  background: var(--color-border);
+  border-radius: 2px;
+  margin-bottom: 0.7rem;
+  animation: skeletonPulse 1.3s ease-in-out infinite;
+}
+
+.skeleton-line.short {
+  width: 40%;
+}
+.skeleton-line.medium {
+  width: 65%;
+}
+.skeleton-line.long {
+  width: 90%;
+}
+
+@keyframes skeletonPulse {
+  0%,
+  100% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+.culture-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-top: 0.5rem;
+}
+
+.culture-chip {
+  border: var(--border-width) solid var(--color-border);
+  padding: 0.5rem 0.8rem;
+  max-width: 220px;
+}
+
+.culture-chip .zh-text {
+  font-size: 1rem;
+}
+.back-button {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--color-olive);
+  text-decoration: none;
+  margin: 1.2rem 2.5rem 0;
+}
+
+.back-button:hover {
+  color: var(--color-red);
+}
+.culture-note {
+  display: block;
+  font-size: 0.75rem;
+  color: var(--color-olive);
+  margin-top: 0.2rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .skeleton-line {
+    animation: none;
+    opacity: 0.7;
+  }
+}
 
 .card-footer {
   display: flex;
