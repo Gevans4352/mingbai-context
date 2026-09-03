@@ -1,0 +1,842 @@
+{
+  "chi gua": {
+    "input": "吃瓜",
+    "pinyin": "chī guā",
+    "literal": "eating melon",
+    "tags": ["playful", "memeable"],
+    "formal": {
+      "natural": "Watching a situation unfold as an uninvolved observer.",
+      "example": {
+        "scenario": "A messy public argument breaks out in a group chat.",
+        "usage": "吃瓜",
+        "meaning_here": "I'm just here to observe, not to get involved."
+      },
+      "cultural_context": "Comes from the image of someone eating melon seeds while watching a show. Used online to mark yourself as a spectator to drama rather than a participant."
+    },
+    "genz": {
+      "natural": "I'm here for the drama, not participating, just watching.",
+      "example": {
+        "scenario": "Your friend group's chat turns into chaos over some tea.",
+        "usage": "吃瓜 😂",
+        "meaning_here": "grabbing popcorn, staying out of it"
+      },
+      "cultural_context": "The melon-eating spectator vibe. You pull up a chair, say nothing, and enjoy the chaos from a safe distance."
+    }
+  },
+  "zhen xiang": {
+    "input": "真香",
+    "pinyin": "zhēn xiāng",
+    "literal": "actually fragrant",
+    "tags": ["memeable", "playful"],
+    "formal": {
+      "natural": "Admitting you were wrong after initially rejecting something.",
+      "example": {
+        "scenario": "Someone swears they'll never try a trend, then ends up loving it.",
+        "usage": "真香",
+        "meaning_here": "I said I wouldn't like this, but I actually do."
+      },
+      "cultural_context": "Originated from a reality TV contestant who refused food, then was later shown enjoying it. Now used any time someone flip-flops after resisting something."
+    },
+    "genz": {
+      "natural": "okay i actually like it now, i was so wrong",
+      "example": {
+        "scenario": "You said you'd never watch that show, now you're on episode 20.",
+        "usage": "真香!",
+        "meaning_here": "the flip-flop is complete, no shame"
+      },
+      "cultural_context": "The classic u-turn meme. Started from a guy who swore off instant noodles on TV then got caught eating them happily minutes later."
+    }
+  },
+  "lipu": {
+    "input": "离谱",
+    "pinyin": "lí pǔ",
+    "literal": "off the musical score",
+    "tags": ["dramatic", "memeable"],
+    "formal": {
+      "natural": "Describing something as absurd or unreasonable.",
+      "example": {
+        "scenario": "A friend describes an unbelievably unfair situation at work.",
+        "usage": "离谱",
+        "meaning_here": "That's genuinely ridiculous."
+      },
+      "cultural_context": "Literally means straying from the musical notation, implying something is completely off-key or out of line with what's reasonable."
+    },
+    "genz": {
+      "natural": "that's so ridiculous, no way",
+      "example": {
+        "scenario": "Someone tells you their landlord raised rent by 50% overnight.",
+        "usage": "离谱!!",
+        "meaning_here": "actual disbelief, this can't be real"
+      },
+      "cultural_context": "Your go-to when something is so unreasonable it's basically off the charts. Peak exasperation energy."
+    }
+  },
+  "shang tou le": {
+    "input": "上头了",
+    "pinyin": "shàng tóu le",
+    "literal": "gone to the head",
+    "tags": ["dramatic", "playful"],
+    "formal": {
+      "natural": "Becoming intensely absorbed or hooked on something.",
+      "example": {
+        "scenario": "You've watched six episodes of a new drama in one sitting.",
+        "usage": "上头了",
+        "meaning_here": "I'm completely hooked on this."
+      },
+      "cultural_context": "Originally described alcohol going to your head. Now used for anything that grabs you intensely, a song, a show, an idea."
+    },
+    "genz": {
+      "natural": "i'm obsessed, this got me hooked instantly",
+      "example": {
+        "scenario": "A new song is stuck on repeat and you can't stop.",
+        "usage": "上头了 🔥",
+        "meaning_here": "certified addicted, no cure"
+      },
+      "cultural_context": "The feeling of something hitting different and taking over your brain. Full send obsession mode."
+    }
+  },
+  "tang ping": {
+    "input": "躺平",
+    "pinyin": "tǎng píng",
+    "literal": "lying flat",
+    "tags": ["resigned", "chaotic"],
+    "formal": {
+      "natural": "Opting out of hustle culture and reduced expectations.",
+      "example": {
+        "scenario": "Someone decides to stop chasing promotions and overtime entirely.",
+        "usage": "躺平",
+        "meaning_here": "I'm choosing to disengage from the pressure to constantly achieve."
+      },
+      "cultural_context": "A social movement term describing quiet resistance to overwork, doing the bare minimum rather than striving within an exhausting system."
+    },
+    "genz": {
+      "natural": "i'm opting out, doing the bare minimum and that's it",
+      "example": {
+        "scenario": "Your coworker stops volunteering for extra projects entirely.",
+        "usage": "躺平中",
+        "meaning_here": "quiet quitting, but as a whole lifestyle"
+      },
+      "cultural_context": "The ultimate soft rebellion. Not burning out loudly, just quietly refusing to play the hustle game anymore."
+    }
+  },
+  "XSWL": {
+    "input": "笑死我了",
+    "pinyin": "xiào sǐ wǒ le",
+    "literal": "laughing me to death",
+    "tags": ["playful", "memeable"],
+    "formal": {
+      "natural": "Finding something extremely funny.",
+      "example": {
+        "scenario": "A friend sends a genuinely hilarious video.",
+        "usage": "XSWL",
+        "meaning_here": "That was extremely amusing."
+      },
+      "cultural_context": "An abbreviation of 笑死我了, used constantly in casual chat as a quick laughing reaction."
+    },
+    "genz": {
+      "natural": "LMAO / dying of laughter",
+      "example": {
+        "scenario": "A friend sends a funny video of a cat falling off a chair.",
+        "usage": "XSWL 💀",
+        "meaning_here": "I am actually crying laughing"
+      },
+      "cultural_context": "The go-to abbreviation for pure laughter reaction, used the way you'd type LMAO in English."
+    }
+  },
+  "YYDS": {
+    "input": "永远的神",
+    "pinyin": "yǒng yuǎn de shén",
+    "literal": "forever the god",
+    "tags": ["wholesome", "playful", "memeable"],
+    "formal": {
+      "natural": "Describing someone or something as exceptional beyond comparison.",
+      "example": {
+        "scenario": "A fan describes their favorite athlete's performance.",
+        "usage": "YYDS",
+        "meaning_here": "This is truly the best, without equal."
+      },
+      "cultural_context": "Originated in esports fandom, now used broadly for anything considered the undisputed best in its category."
+    },
+    "genz": {
+      "natural": "the absolute GOAT, transcends normal praise",
+      "example": {
+        "scenario": "Someone posts about a movie or song that's genuinely incredible.",
+        "usage": "YYDS 🐐",
+        "meaning_here": "there is no competition, this is it"
+      },
+      "cultural_context": "Started with a gaming legend, now the ultimate stamp of approval for literally anything."
+    }
+  },
+  "SRSD": {
+    "input": "虽然但是",
+    "pinyin": "suī rán dàn shì",
+    "literal": "although, but",
+    "tags": ["formal", "resigned"],
+    "formal": {
+      "natural": "Acknowledging a point while still holding a reservation.",
+      "example": {
+        "scenario": "Agreeing with someone's point but adding a caveat.",
+        "usage": "SRSD",
+        "meaning_here": "That's valid, but here's my hesitation."
+      },
+      "cultural_context": "An abbreviation of the classic although-but sentence structure, used to soften disagreement in casual text."
+    },
+    "genz": {
+      "natural": "but still, low key not fully convinced",
+      "example": {
+        "scenario": "You agree with a friend's plan but have a lingering concern.",
+        "usage": "SRSD...",
+        "meaning_here": "I hear you, but hold on a sec"
+      },
+      "cultural_context": "The texting shortcut for softly pushing back without fully disagreeing."
+    }
+  },
+  "UISI": {
+    "input": "有一说一",
+    "pinyin": "yǒu yī shuō yī",
+    "literal": "if there's one, say one",
+    "tags": ["formal", "wholesome"],
+    "formal": {
+      "natural": "Speaking honestly and directly about something.",
+      "example": {
+        "scenario": "Giving blunt, fair feedback on a plan.",
+        "usage": "UISI",
+        "meaning_here": "To be fair, and speaking honestly here."
+      },
+      "cultural_context": "A phrase for calling things exactly as they are, used to preface an honest or fair take."
+    },
+    "genz": {
+      "natural": "to be fair though, not gonna lie",
+      "example": {
+        "scenario": "You're about to give an honest, slightly critical opinion.",
+        "usage": "UISI it's kinda mid",
+        "meaning_here": "real talk incoming"
+      },
+      "cultural_context": "Your disclaimer before dropping an unfiltered but fair opinion."
+    }
+  },
+  "DDDD": {
+    "input": "懂的都懂",
+    "pinyin": "dǒng de dōu dǒng",
+    "literal": "those who understand, understand",
+    "tags": ["memeable", "chaotic"],
+    "formal": {
+      "natural": "Implying shared, unspoken understanding without elaborating.",
+      "example": {
+        "scenario": "Referencing an inside joke without explaining it.",
+        "usage": "DDDD",
+        "meaning_here": "Those in the know will understand."
+      },
+      "cultural_context": "Used to leave something deliberately vague, signaling insider knowledge without spelling it out."
+    },
+    "genz": {
+      "natural": "iykyk",
+      "example": {
+        "scenario": "You post something only your close friends will get.",
+        "usage": "DDDD 👀",
+        "meaning_here": "not explaining further, you either get it or you don't"
+      },
+      "cultural_context": "The Chinese internet's iykyk. Peak mystery-poster energy."
+    }
+  },
+  "SZD": {
+    "input": "是真的",
+    "pinyin": "shì zhēn de",
+    "literal": "it's real",
+    "tags": ["dramatic", "playful"],
+    "formal": {
+      "natural": "Emphasizing that something is genuinely true.",
+      "example": {
+        "scenario": "Confirming a surprising piece of news is accurate.",
+        "usage": "SZD",
+        "meaning_here": "This is genuinely true, not an exaggeration."
+      },
+      "cultural_context": "A quick way to underline sincerity or confirm something isn't a joke."
+    },
+    "genz": {
+      "natural": "for real, no cap",
+      "example": {
+        "scenario": "Someone doubts a wild story you're telling.",
+        "usage": "SZD fr fr",
+        "meaning_here": "I promise this actually happened"
+      },
+      "cultural_context": "The emphatic 'I'm not lying' stamp, used constantly to back up a claim."
+    }
+  },
+  "PLMM": {
+    "input": "漂亮妹妹",
+    "pinyin": "piào liang mèi mei",
+    "literal": "pretty little sister",
+    "tags": ["wholesome", "playful"],
+    "formal": {
+      "natural": "Referring to an attractive young woman.",
+      "example": {
+        "scenario": "Commenting positively on someone's appearance in a photo.",
+        "usage": "PLMM",
+        "meaning_here": "A compliment calling someone a pretty girl."
+      },
+      "cultural_context": "A common, friendly compliment abbreviation used across social platforms."
+    },
+    "genz": {
+      "natural": "pretty girl",
+      "example": {
+        "scenario": "Complimenting a cute photo someone posted.",
+        "usage": "PLMM 😍",
+        "meaning_here": "just a sweet compliment, nothing deep"
+      },
+      "cultural_context": "A go-to friendly compliment stamp under photos, casual and warm."
+    }
+  },
+  "ZQSG": {
+    "input": "真情实感",
+    "pinyin": "zhēn qíng shí gǎn",
+    "literal": "real feeling, real emotion",
+    "tags": ["wholesome", "dramatic"],
+    "formal": {
+      "natural": "Expressing that an emotional reaction is completely genuine.",
+      "example": {
+        "scenario": "Reacting sincerely to something emotionally moving.",
+        "usage": "ZQSG",
+        "meaning_here": "This reaction is genuine, not performative."
+      },
+      "cultural_context": "Used to mark a moment of real, unfiltered emotion, distinguishing it from ironic or joking reactions."
+    },
+    "genz": {
+      "natural": "genuinely feeling this, not being ironic",
+      "example": {
+        "scenario": "You tear up over a scene in a show and want people to know it's real.",
+        "usage": "ZQSG 🥹",
+        "meaning_here": "no jokes here, actually emotional"
+      },
+      "cultural_context": "Your flag for 'this isn't a bit, I really mean it' in a very online, often ironic space."
+    }
+  },
+  "AWSL": {
+    "input": "啊我死了",
+    "pinyin": "a wǒ sǐ le",
+    "literal": "ah I died",
+    "tags": ["dramatic", "wholesome", "memeable"],
+    "formal": {
+      "natural": "Expressing being overwhelmed, usually by something extremely cute or moving.",
+      "example": {
+        "scenario": "Reacting to an adorable video of a baby animal.",
+        "usage": "AWSL",
+        "meaning_here": "I'm overwhelmed by how cute this is."
+      },
+      "cultural_context": "An exaggerated expression of being 'done in' by cuteness or overwhelming emotion, common in fan and pet content."
+    },
+    "genz": {
+      "natural": "i'm dead... too cute, can't handle it",
+      "example": {
+        "scenario": "A video of a puppy doing something impossibly cute.",
+        "usage": "AWSL 😭😭",
+        "meaning_here": "certified death by cuteness"
+      },
+      "cultural_context": "The dramatic 'I have died from how cute/moving this is' reaction, said with zero literal intent."
+    }
+  },
+  "BDJW": {
+    "input": "不懂就问",
+    "pinyin": "bù dǒng jiù wèn",
+    "literal": "don't understand, so ask",
+    "tags": ["wholesome", "formal"],
+    "formal": {
+      "natural": "Asking a genuine, non-judgmental question out of curiosity.",
+      "example": {
+        "scenario": "Asking about a reference you don't recognize in a conversation.",
+        "usage": "BDJW",
+        "meaning_here": "Asking sincerely, not looking to criticize."
+      },
+      "cultural_context": "A disclaimer used before asking a question, signaling the asker isn't trying to judge or mock, just genuinely doesn't know."
+    },
+    "genz": {
+      "natural": "asking cus i genuinely don't know, no judgment",
+      "example": {
+        "scenario": "You see a trend everyone's talking about but have no context.",
+        "usage": "BDJW what is this",
+        "meaning_here": "not shading anyone, just lost"
+      },
+      "cultural_context": "The safe way to ask a question online without it reading as an attack or mockery."
+    }
+  },
+  "666": {
+    "input": "666",
+    "pinyin": "liù liù liù",
+    "literal": "six six six",
+    "tags": ["playful", "memeable"],
+    "formal": {
+      "natural": "Expressing that something is impressively skillful.",
+      "example": {
+        "scenario": "Someone pulls off an impressive move in a game.",
+        "usage": "666",
+        "meaning_here": "That was very skillfully done."
+      },
+      "cultural_context": "The number six sounds like 溜 (liū, 'smooth/slick') in gaming slang, so repeating it praises a smooth, skillful play."
+    },
+    "genz": {
+      "natural": "insane skills, that was so clean",
+      "example": {
+        "scenario": "A streamer pulls off a clutch play.",
+        "usage": "666666",
+        "meaning_here": "certified impressive, pure skill"
+      },
+      "cultural_context": "Started in gaming, now used anywhere someone does something impressively smooth."
+    }
+  },
+  "da call": {
+    "input": "打call",
+    "pinyin": "dǎ call",
+    "literal": "hit/do a call",
+    "tags": ["wholesome", "playful"],
+    "formal": {
+      "natural": "Showing enthusiastic support for someone.",
+      "example": {
+        "scenario": "Cheering on a friend's new project or performance.",
+        "usage": "打call",
+        "meaning_here": "I'm cheering you on wholeheartedly."
+      },
+      "cultural_context": "Borrowed from Japanese idol concert culture, where fans do coordinated chants and cheers. Now used generally to mean enthusiastic support."
+    },
+    "genz": {
+      "natural": "cheering you on so hard right now",
+      "example": {
+        "scenario": "Your friend launches something they've worked hard on.",
+        "usage": "给你打call! 📣",
+        "meaning_here": "full support mode activated"
+      },
+      "cultural_context": "Idol-fandom energy applied to everyday hype. Basically your loudest supportive cheer."
+    }
+  },
+  "fo xi": {
+    "input": "佛系",
+    "pinyin": "fó xì",
+    "literal": "buddha-style",
+    "tags": ["resigned", "wholesome"],
+    "formal": {
+      "natural": "Adopting a detached, low-expectation approach to life.",
+      "example": {
+        "scenario": "Someone stops stressing over outcomes they can't control.",
+        "usage": "佛系",
+        "meaning_here": "I'm taking a calm, unattached approach to this."
+      },
+      "cultural_context": "Inspired by Buddhist detachment, describing a laid-back attitude of not caring too much about winning or losing."
+    },
+    "genz": {
+      "natural": "whatever happens happens, i'm not stressing",
+      "example": {
+        "scenario": "You submit a job application and decide not to overthink the outcome.",
+        "usage": "佛系了",
+        "meaning_here": "zen mode, no anxiety allowed"
+      },
+      "cultural_context": "The chill older cousin of 躺平, less opting-out and more just... not sweating it."
+    }
+  },
+  "nei juan": {
+    "input": "内卷",
+    "pinyin": "nèi juǎn",
+    "literal": "inward rolling",
+    "tags": ["dramatic", "resigned", "formal"],
+    "formal": {
+      "natural": "Describing an exhausting cycle of competition with diminishing returns.",
+      "example": {
+        "scenario": "Everyone in an office works longer hours just to keep up with each other.",
+        "usage": "内卷",
+        "meaning_here": "This is an unproductive spiral of overwork."
+      },
+      "cultural_context": "An academic term for involution, adopted online to describe workplaces or schools where everyone overworks just to stay level, not ahead."
+    },
+    "genz": {
+      "natural": "everyone's grinding so hard just to stay in place, it's exhausting",
+      "example": {
+        "scenario": "Classmates start studying all night just because others do.",
+        "usage": "太内卷了",
+        "meaning_here": "the competition spiral is out of control"
+      },
+      "cultural_context": "The burnout-inducing spiral where working harder just resets the baseline for everyone else too."
+    }
+  },
+  "po fang": {
+    "input": "破防",
+    "pinyin": "pò fáng",
+    "literal": "broke the defense",
+    "tags": ["dramatic", "wholesome"],
+    "formal": {
+      "natural": "Being emotionally caught off guard by something moving.",
+      "example": {
+        "scenario": "A sudden emotional scene in a show catches you off guard.",
+        "usage": "破防",
+        "meaning_here": "That got past my emotional guard."
+      },
+      "cultural_context": "A gaming term for breaking through a defense shield, now used for anything that breaks through your emotional composure."
+    },
+    "genz": {
+      "natural": "when something hits so hard your walls crumble, you cry or lose composure",
+      "example": {
+        "scenario": "An unexpected sentimental moment in a video makes you tear up.",
+        "usage": "破防了 😢",
+        "meaning_here": "defenses down, feelings everywhere"
+      },
+      "cultural_context": "That moment something sneaks past your emotional armor and you're suddenly not okay."
+    }
+  },
+  "bai lan": {
+    "input": "摆烂",
+    "pinyin": "bǎi làn",
+    "literal": "displaying rot",
+    "tags": ["chaotic", "resigned", "memeable"],
+    "formal": {
+      "natural": "Deliberately giving up effort once a situation feels unsalvageable.",
+      "example": {
+        "scenario": "A project is already going badly, so someone stops trying to fix it.",
+        "usage": "摆烂",
+        "meaning_here": "I've stopped trying to salvage this."
+      },
+      "cultural_context": "Describes intentionally letting something fail further rather than fighting an uphill battle, a step past tǎng píng into active disengagement."
+    },
+    "genz": {
+      "natural": "it's already bad so i'm not even trying anymore, full send chaos",
+      "example": {
+        "scenario": "You bomb the first half of an exam and stop caring about the rest.",
+        "usage": "摆烂了",
+        "meaning_here": "zero effort mode, it is what it is"
+      },
+      "cultural_context": "Tang ping's messier cousin. Less peaceful detachment, more 'well this is already ruined so whatever.'"
+    }
+  },
+  "she si": {
+    "input": "社死",
+    "pinyin": "shè sǐ",
+    "literal": "social death",
+    "tags": ["dramatic", "memeable"],
+    "formal": {
+      "natural": "Experiencing severe public embarrassment.",
+      "example": {
+        "scenario": "Someone trips and falls in front of a large crowd.",
+        "usage": "社死",
+        "meaning_here": "This is deeply, publicly embarrassing."
+      },
+      "cultural_context": "Short for 社会性死亡, describing embarrassment so severe it feels like your social standing has died."
+    },
+    "genz": {
+      "natural": "i want to disappear, the embarrassment is unbearable",
+      "example": {
+        "scenario": "You accidentally send a text to the wrong group chat.",
+        "usage": "社死现场 💀",
+        "meaning_here": "peak cringe, no recovering from this"
+      },
+      "cultural_context": "The dramatic 'I could just die' reaction to public embarrassment, said with full theatrical flair."
+    }
+  },
+  "fan er sai": {
+    "input": "凡尔赛",
+    "pinyin": "fán ěr sài",
+    "literal": "Versailles",
+    "tags": ["sarcastic", "memeable"],
+    "formal": {
+      "natural": "Humble-bragging by complaining in a way that reveals privilege.",
+      "example": {
+        "scenario": "Someone complains their new car's leather seats give them a rash.",
+        "usage": "凡尔赛",
+        "meaning_here": "This complaint is secretly a brag."
+      },
+      "cultural_context": "Named after the opulence of the Palace of Versailles, describing posts that complain while subtly flaunting wealth or success."
+    },
+    "genz": {
+      "natural": "humble bragging so hard, the flex is not subtle",
+      "example": {
+        "scenario": "Someone posts 'ugh so tired from managing three properties.'",
+        "usage": "凡尔赛文学",
+        "meaning_here": "we see through this 'complaint'"
+      },
+      "cultural_context": "The art of complaining about your blessings just loud enough for everyone to notice them."
+    }
+  },
+  "jue jue zi": {
+    "input": "绝绝子",
+    "pinyin": "jué jué zi",
+    "literal": "absolutely absolute",
+    "tags": ["playful", "memeable", "dramatic"],
+    "formal": {
+      "natural": "Expressing that something is extreme, either extremely good or extremely bad.",
+      "example": {
+        "scenario": "Reacting to an outstanding performance or a disastrous one.",
+        "usage": "绝绝子",
+        "meaning_here": "This is at an extreme, in either direction."
+      },
+      "cultural_context": "An intensifier used flexibly for both high praise and harsh criticism, tone depends entirely on context."
+    },
+    "genz": {
+      "natural": "this is either amazing or a disaster, no in-between",
+      "example": {
+        "scenario": "A dramatic reaction video or an over-the-top outfit.",
+        "usage": "绝绝子!!",
+        "meaning_here": "extra energy, could go either way"
+      },
+      "cultural_context": "Maximum drama intensifier, the tone of voice does all the work of telling you if it's praise or shade."
+    }
+  },
+  "na nie": {
+    "input": "拿捏",
+    "pinyin": "ná niē",
+    "literal": "to grasp and pinch",
+    "tags": ["dramatic", "memeable"],
+    "formal": {
+      "natural": "Having complete control or mastery over a situation or person.",
+      "example": {
+        "scenario": "Someone effortlessly gets their way in an argument.",
+        "usage": "拿捏",
+        "meaning_here": "They have this fully under control."
+      },
+      "cultural_context": "Describes precise control, like holding something firmly between your fingers, applied to mastering people or situations."
+    },
+    "genz": {
+      "natural": "they've got this completely figured out and controlled",
+      "example": {
+        "scenario": "A friend effortlessly convinces their parents to say yes to anything.",
+        "usage": "拿捏住了",
+        "meaning_here": "total mastery, nothing gets past them"
+      },
+      "cultural_context": "The confident flex of having someone or something totally figured out and under your thumb."
+    }
+  },
+  "da gong ren": {
+    "input": "打工人",
+    "pinyin": "dǎ gōng rén",
+    "literal": "working person",
+    "tags": ["resigned", "wholesome", "memeable"],
+    "formal": {
+      "natural": "A self-deprecating but proud term for the working class grind.",
+      "example": {
+        "scenario": "Someone posts about waking up early for another exhausting workday.",
+        "usage": "打工人",
+        "meaning_here": "Just another worker enduring the daily grind."
+      },
+      "cultural_context": "Became a solidarity term among young workers, acknowledging exhausting labor with dark humor and camaraderie rather than despair."
+    },
+    "genz": {
+      "natural": "just a tired worker out here surviving the grind, solidarity",
+      "example": {
+        "scenario": "Monday morning commute selfie with a caption about barely functioning.",
+        "usage": "打工人打工魂",
+        "meaning_here": "we're all suffering through this together"
+      },
+      "cultural_context": "The relatable 'we're all exhausted employees' rallying cry, worn like a badge of tired honor."
+    }
+  },
+  "ji mei": {
+    "input": "集美",
+    "pinyin": "jí měi",
+    "literal": "gathered beauty",
+    "tags": ["wholesome", "playful"],
+    "formal": {
+      "natural": "A friendly, informal way to address other women, similar to 'girlies.'",
+      "example": {
+        "scenario": "Addressing a group of female friends or followers online.",
+        "usage": "集美们",
+        "meaning_here": "Hey girls, addressing you all warmly."
+      },
+      "cultural_context": "A playful homophone stand-in for 姐妹 (sisters), popularized in short-video culture as a warm way to address women."
+    },
+    "genz": {
+      "natural": "hey girlies, casual warm way to address the girls",
+      "example": {
+        "scenario": "Opening a video or post addressed to your female audience.",
+        "usage": "集美们好呀",
+        "meaning_here": "hi besties, an affectionate group greeting"
+      },
+      "cultural_context": "The internet's cute mispronunciation-turned-affectionate nickname for 'sisters.'"
+    }
+  },
+  "beng bu zhu le": {
+    "input": "蚌埠住了",
+    "pinyin": "bèng bù zhù le",
+    "literal": "Bengbu couldn't hold it",
+    "tags": ["playful", "memeable"],
+    "formal": {
+      "natural": "Unable to hold back laughter or a reaction any longer.",
+      "example": {
+        "scenario": "Seeing something so absurd you can't keep a straight face.",
+        "usage": "蚌埠住了",
+        "meaning_here": "I genuinely couldn't hold back my reaction."
+      },
+      "cultural_context": "A pun on 绷不住了 (can't hold it together), using the city name Bengbu as a homophone joke."
+    },
+    "genz": {
+      "natural": "i can't hold it together, this broke me",
+      "example": {
+        "scenario": "An absurd meme or video makes you lose composure completely.",
+        "usage": "蚌埠住了😭",
+        "meaning_here": "full meltdown from laughing or secondhand embarrassment"
+      },
+      "cultural_context": "A city-name pun that became shorthand for 'I cannot keep my composure right now.'"
+    }
+  },
+  "ke dao le": {
+    "input": "磕到了",
+    "pinyin": "kē dào le",
+    "literal": "gnawed into it",
+    "tags": ["wholesome", "dramatic", "playful"],
+    "formal": {
+      "natural": "Becoming emotionally invested in a pairing or relationship dynamic.",
+      "example": {
+        "scenario": "Watching a show and becoming attached to a particular pair's dynamic.",
+        "usage": "磕到了",
+        "meaning_here": "I've become emotionally invested in this pairing."
+      },
+      "cultural_context": "Fandom term for shipping, becoming attached to a couple or dynamic in a show, book, or real life."
+    },
+    "genz": {
+      "natural": "i'm so invested in this ship, i'm feral about it",
+      "example": {
+        "scenario": "Two characters have a moment and you're immediately obsessed.",
+        "usage": "磕到了!!",
+        "meaning_here": "certified ship, no turning back now"
+      },
+      "cultural_context": "Fandom brain rot in its purest form, you've officially caught feelings for a dynamic."
+    }
+  },
+  "emo le": {
+    "input": "emo了",
+    "pinyin": "emo le",
+    "literal": "went emo",
+    "tags": ["resigned", "dramatic"],
+    "formal": {
+      "natural": "Feeling suddenly low or emotionally overwhelmed.",
+      "example": {
+        "scenario": "A sad song comes on and your mood shifts instantly.",
+        "usage": "emo了",
+        "meaning_here": "I've fallen into a low, reflective mood."
+      },
+      "cultural_context": "Borrowed directly from English 'emo,' used to describe a sudden dip into melancholy or sentimentality."
+    },
+    "genz": {
+      "natural": "in my feelings right now, mood just dropped",
+      "example": {
+        "scenario": "Late night scrolling through old photos hits different.",
+        "usage": "emo了 🥀",
+        "meaning_here": "spiraling a little, feeling some type of way"
+      },
+      "cultural_context": "The universal late-night mood shift, borrowed word, borderless feeling."
+    }
+  },
+  "ba bi q le": {
+    "input": "芭比Q了",
+    "pinyin": "bā bǐ Q le",
+    "literal": "barbecued",
+    "tags": ["dramatic", "memeable", "chaotic"],
+    "formal": {
+      "natural": "Describing a situation as completely ruined or over.",
+      "example": {
+        "scenario": "A plan falls apart at the last possible moment.",
+        "usage": "芭比Q了",
+        "meaning_here": "This situation is completely done for."
+      },
+      "cultural_context": "A playful homophone of 'barbecue,' used dramatically to mean something is thoroughly finished or ruined."
+    },
+    "genz": {
+      "natural": "it's so over, this is fully cooked and done",
+      "example": {
+        "scenario": "You realize you submitted the wrong file five minutes before a deadline.",
+        "usage": "芭比Q了 🔥",
+        "meaning_here": "total disaster, nothing left to salvage"
+      },
+      "cultural_context": "Dramatic doom announcement, treating a minor disaster like an actual barbecue explosion."
+    }
+  },
+  "wu yu": {
+    "input": "无语",
+    "pinyin": "wú yǔ",
+    "literal": "wordless",
+    "tags": ["sarcastic", "resigned"],
+    "formal": {
+      "natural": "Being at a loss for words, usually out of exasperation.",
+      "example": {
+        "scenario": "Someone does something so frustrating you can't even respond.",
+        "usage": "无语",
+        "meaning_here": "I'm speechless, in a frustrated way."
+      },
+      "cultural_context": "A flat, deadpan expression of exasperated disbelief, more tired than angry."
+    },
+    "genz": {
+      "natural": "i have nothing to say, this is exhausting",
+      "example": {
+        "scenario": "A coworker does the same annoying thing for the fifth time.",
+        "usage": "无语了",
+        "meaning_here": "deadpan exhaustion, no energy left to react"
+      },
+      "cultural_context": "The verbal equivalent of a blank stare. Not mad, just tired."
+    }
+  },
+  "lei mu": {
+    "input": "泪目",
+    "pinyin": "lèi mù",
+    "literal": "teary eyes",
+    "tags": ["wholesome", "dramatic"],
+    "formal": {
+      "natural": "Being moved to tears by something touching.",
+      "example": {
+        "scenario": "A heartfelt reunion video moves viewers deeply.",
+        "usage": "泪目",
+        "meaning_here": "This brought tears to my eyes."
+      },
+      "cultural_context": "A common comment on genuinely touching content, sincere rather than ironic."
+    },
+    "genz": {
+      "natural": "tearing up, this genuinely got to me",
+      "example": {
+        "scenario": "A heartwarming video of someone reuniting with family.",
+        "usage": "泪目了 🥹",
+        "meaning_here": "real tears, no sarcasm here"
+      },
+      "cultural_context": "One of the few purely sincere reactions in a space full of irony, real feelings, openly stated."
+    }
+  },
+  "zun du jia du": {
+    "input": "尊嘟假嘟",
+    "pinyin": "zūn dū jiǎ dū",
+    "literal": "baby-talk for 'real or fake'",
+    "tags": ["playful", "memeable"],
+    "formal": {
+      "natural": "A cutesy way of asking whether something is actually true.",
+      "example": {
+        "scenario": "Reacting to a surprising claim with playful disbelief.",
+        "usage": "尊嘟假嘟",
+        "meaning_here": "Is this really true or not?"
+      },
+      "cultural_context": "A baby-talk mispronunciation of 真的假的 (really, or fake?), used for cute, exaggerated disbelief."
+    },
+    "genz": {
+      "natural": "wait fr or nah, said in the most babyish voice possible",
+      "example": {
+        "scenario": "A friend tells you something wild and you react with exaggerated cuteness.",
+        "usage": "尊嘟假嘟?? 🥺",
+        "meaning_here": "playful skepticism, maximum cute energy"
+      },
+      "cultural_context": "The internet's baby-voice version of 'wait really?', deployed purely for cuteness points."
+    }
+  },
+  "shang fen": {
+    "input": "上分",
+    "pinyin": "shàng fēn",
+    "literal": "going up in points",
+    "tags": ["playful", "dramatic"],
+    "formal": {
+      "natural": "Making progress or improving one's standing.",
+      "example": {
+        "scenario": "Someone does something that clearly boosts their reputation or rank.",
+        "usage": "上分了",
+        "meaning_here": "This is a genuine improvement in standing."
+      },
+      "cultural_context": "A gaming term for ranking up, applied more broadly to any situation where someone gains an advantage or good impression."
+    },
+    "genz": {
+      "natural": "leveling up, scoring points in a good way",
+      "example": {
+        "scenario": "Someone does something impressive in front of their crush.",
+        "usage": "上分了兄弟",
+        "meaning_here": "clean win, points earned"
+      },
+      "cultural_context": "Gaming rank-up energy applied to real life flexes, big or small."
+    }
+  }
+}
