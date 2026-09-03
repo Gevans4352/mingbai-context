@@ -1,14 +1,15 @@
 import { useState, useEffect } from "react";
 import "../styles/profile.css";
 import FloatingEmojis from "../components/floatingEmojis";
+import BackButton from "../components/backButton";
 
 interface ProfileData {
   name: string;
   email: string;
   country: string;
   default_register: "genz" | "formal";
-  total_decodes: number; 
-  top_tag: string | null; 
+  total_decodes: number;
+  top_tag: string | null;
 }
 
 interface HistoryItem {
@@ -95,11 +96,38 @@ function Profile() {
 
   if (!profile || !form) {
     return (
-      <div>
-        <p className="section-label">02 / Profile</p>
-        <h1>
-          Loading<span className="accent">...</span>
-        </h1>
+      <div className="profile-page">
+        <div className="profile-main">
+          
+          <p className="section-label">02 / Profile</p>
+          <h1>
+            Loading<span className="accent">...</span>
+          </h1>
+
+          <p className="section-label" style={{ marginTop: "2.5rem" }}>
+            Recent Decodes
+          </p>
+          <div className="masonry-grid">
+            {[1, 2, 3, 4].map((i) => (
+              <div className="masonry-skeleton-card" key={i}>
+                <div className="skel-line w40"></div>
+                <div className="skel-line w60"></div>
+                <div className="skel-line w80"></div>
+                <div className="skel-line w60"></div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <aside className="infobox-skeleton">
+          <div className="skel-title"></div>
+          {[1, 2, 3, 4, 5, 6].map((i) => (
+            <div className="skel-row" key={i}>
+              <div className="skel-label"></div>
+              <div className="skel-value"></div>
+            </div>
+          ))}
+        </aside>
       </div>
     );
   }
@@ -108,6 +136,7 @@ function Profile() {
     <div className="profile-page">
       <FloatingEmojis />
       <div className="profile-main">
+        <BackButton />
         <p className="section-label">02 / Profile</p>
         <h1>
           The Archive of <span className="accent">{profile.name}.</span>
