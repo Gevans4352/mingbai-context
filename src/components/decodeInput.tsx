@@ -4,9 +4,10 @@ import type { DecodeResult } from "../types";
 interface DecodeInputProps {
   onDecode: (result: DecodeResult) => void;
   register: "genz" | "formal";
+  onLoadingChange: (loading: boolean)=> void;
 }
 
-function DecodeInput({ onDecode, register }: DecodeInputProps) {
+function DecodeInput({ onDecode, register, onLoadingChange }: DecodeInputProps) {
   const [phrase, setPhrase] = useState("");
   const [loading, setLoading] = useState(false);
 
@@ -15,10 +16,9 @@ function DecodeInput({ onDecode, register }: DecodeInputProps) {
     if (!phrase.trim()) return;
 
     setLoading(true);
+    onLoadingChange(true);
     try {
-      // Derive mode from register
       const mode = register === "genz" ? "meme" : "standard";
-
       const response = await fetch("http://localhost:5000/api/decode", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -26,7 +26,7 @@ function DecodeInput({ onDecode, register }: DecodeInputProps) {
         body: JSON.stringify({
           phrase,
           register,
-          mode, // <-- now derived, not from state
+          mode, 
         }),
       });
 
@@ -41,6 +41,7 @@ function DecodeInput({ onDecode, register }: DecodeInputProps) {
       console.error("Failed to decode:", err);
     } finally {
       setLoading(false);
+      onLoadingChange(false);
     }
   }
 
