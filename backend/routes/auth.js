@@ -2,10 +2,17 @@ import express from "express";
 import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
 import { pool } from "../db/pool.js";
+import rateLimit from "express-rate-limit";
+
+const authLimiter = rateLimit({
+  windowMs: 15 * 60 * 1000,
+  max: 10,
+  message: { error: "Too many attempts, try again later." },
+});
 
 const router = express.Router();
 
-router.post("/register", async (req, res) => {
+router.post("/register", authLimiter, async (req, res) => {
   const { name, email, password, country } = req.body;
 
   if (!name || !email || !password) {
@@ -36,7 +43,7 @@ router.post("/register", async (req, res) => {
   }
 });
 
-router.post("/login", async (req, res) => {
+router.post("/login", authLimiter, async (req, res) => {
   const { email, password } = req.body;
 
   if (!email || !password) {
@@ -69,9 +76,9 @@ router.post("/login", async (req, res) => {
 
     res.cookie("token", token, {
       httpOnly: true,
-      secure: false, // set to true only when actually running over https
+      secure: process.env.NODE_ENV === "production",
       sameSite: "lax",
-      maxAge: 7 * 24 * 60 * 60 * 1000, // 7 days, in milliseconds
+      maxAge: 7 * 24 * 60 * 60 * 1000,
     });
     res.json({
       user: {
