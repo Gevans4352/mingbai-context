@@ -1,4 +1,5 @@
 import express from "express";
+import rateLimit from "express-rate-limit";
 import cors from "cors";
 import dotenv from "dotenv";
 import decodeRoute from "./routes/decode.js";
@@ -19,6 +20,7 @@ app.use(
     credentials: true,
   }),
 );
+
 app.use(express.json());
 app.use(cookieParser());
 app.use("/api", decodeRoute);
