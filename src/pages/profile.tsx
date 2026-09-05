@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import "../styles/profile.css";
 import FloatingEmojis from "../components/floatingEmojis";
 import BackButton from "../components/backButton";
+import { API_URL } from "../config";
 
 interface ProfileData {
   name: string;
@@ -30,7 +31,7 @@ function Profile() {
   useEffect(() => {
     async function load() {
       try {
-        const res = await fetch("http://localhost:5000/api/profile", {
+        const res = await fetch(`${API_URL}/api/profile`, {
           credentials: "include",
         });
         if (res.ok) {
@@ -43,7 +44,7 @@ function Profile() {
       }
 
       try {
-        const res = await fetch("http://localhost:5000/api/history?limit=8", {
+        const res = await fetch(`${API_URL}/api/history?limit=8`, {
           credentials: "include",
         });
         if (res.ok) {
@@ -67,7 +68,7 @@ function Profile() {
         country: form.country,
         default_register: form.default_register,
       };
-      const res = await fetch("http://localhost:5000/api/profile", {
+      const res = await fetch(`${API_URL}/api/profile`, {
         method: "PATCH",
         headers: { "Content-Type": "application/json" },
         credentials: "include",
@@ -98,7 +99,6 @@ function Profile() {
     return (
       <div className="profile-page">
         <div className="profile-main">
-          
           <p className="section-label">02 / Profile</p>
           <h1>
             Loading<span className="accent">...</span>
