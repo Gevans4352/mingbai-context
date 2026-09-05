@@ -139,7 +139,7 @@ function Profile() {
         <BackButton />
         <p className="section-label">02 / Profile</p>
         <h1>
-          The Archive of <span className="accent">{profile.name}.</span>
+          The Archive of <span className="accent">{profile.name}</span>
         </h1>
         <p className="profile-byline">
           A running record of every phrase decoded, every idiom explained.
