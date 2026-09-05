@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import BackButton from "../components/backButton";
+import { API_URL } from "../config";
 
 interface HistoryItem {
   id: string;
@@ -30,7 +31,7 @@ function History() {
       try {
         const offset = (page - 1) * LIMIT;
         const response = await fetch(
-          `http://localhost:5000/api/history?limit=${LIMIT}&offset=${offset}`,
+          `${API_URL}/api/history?limit=${LIMIT}&offset=${offset}`,
           { credentials: "include" },
         );
 
