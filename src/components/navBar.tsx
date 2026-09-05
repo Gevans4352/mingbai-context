@@ -1,12 +1,13 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import "../styles/navbar.css";
+import { API_URL } from "../config";
 
 function NavBar() {
   const [menuOpen, setMenuOpen] = useState(false);
   async function handleLogout() {
     try {
-      await fetch("http://localhost:5000/api/logout", {
+      await fetch(`${API_URL}/api/logout`, {
         method: "POST",
         credentials: "include",
       });
@@ -25,7 +26,11 @@ function NavBar() {
         <div className="nav-links-desktop">
           <Link to="/history">History</Link>
           <Link to="/profile">Profile</Link>
-          <p className="logout" onClick={handleLogout} style={{ cursor: "pointer" }}>
+          <p
+            className="logout"
+            onClick={handleLogout}
+            style={{ cursor: "pointer" }}
+          >
             LogOut
           </p>
         </div>
