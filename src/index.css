@@ -400,15 +400,78 @@ p {
   font-size: 1rem;
 }
 .back-button {
-  display: inline-block;
-  font-family: var(--font-mono);
-  font-size: 0.75rem;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-  color: var(--color-olive);
+  position: relative;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+
+  color: #38332c;
   text-decoration: none;
-  margin: 1.2rem 2.5rem 0;
+
+  font-family: inherit;
+  font-size: 13px;
+  letter-spacing: 0.01em;
+
+  padding: 7px 2px;
+
+  transition: color 180ms ease;
 }
+
+.back-button::after {
+  content: "";
+
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 3px;
+
+  height: 1px;
+
+  background: #bdb09a;
+
+  transform: scaleX(0);
+  transform-origin: left;
+
+  transition: transform 220ms ease;
+}
+
+.back-button:hover {
+  color: #7b6b55;
+}
+
+.back-button:hover::after {
+  transform: scaleX(1);
+}
+
+.back-arrow {
+  display: inline-block;
+
+  font-size: 18px;
+  line-height: 1;
+
+  transform: rotate(-8deg);
+
+  transition: transform 200ms ease;
+}
+
+.back-button:hover .back-arrow {
+  transform: translateX(-3px) rotate(-18deg);
+}
+
+.back-twinkle {
+  font-size: 10px;
+  color: #a5967c;
+
+  transform: translateY(-5px) rotate(12deg);
+
+  transition: transform 200ms ease;
+}
+
+.back-button:hover .back-twinkle {
+  transform: translateY(-6px) rotate(30deg) scale(1.2);
+}
+
 .legal-page {
   max-width: 640px;
   margin: 0 auto;
@@ -583,7 +646,6 @@ p {
   animation-fill-mode: both;
 }
 
-/* --- BASE SOLID COLORS (GUARANTEED VISIBILITY) --- */
 .vs-char {
   font-family: "Ma Shan Zheng", var(--font-emphasis);
   font-size: 3rem;
@@ -622,7 +684,6 @@ p {
 
   [data-theme="genz"] .vs-char,
   [data-theme="dark"] .vs-char {
-    /* Bright gold gradient with varied density */
     background-image: linear-gradient(
       90deg,
       #fffbe6 0%,
@@ -674,8 +735,6 @@ small {
 
   color: var(--color-olive);
 }
-
-
 
 button {
   position: relative;
