@@ -409,10 +409,79 @@ p {
   text-decoration: none;
   margin: 1.2rem 2.5rem 0;
 }
+.legal-page {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 1.5rem 2.5rem 4rem;
+}
+
+.legal-body p {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.legal-body .section-label {
+  margin: 2rem 0 0.5rem;
+}
 
 .back-button:hover {
   color: var(--color-red);
 }
+
+.site-footer {
+  border-top: var(--border-width) solid var(--color-border);
+  padding: 2rem 2.5rem;
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.footer-brand {
+  font-family: var(--font-emphasis);
+  font-weight: 800;
+  font-size: 1rem;
+}
+
+.footer-brand span {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  color: var(--color-olive);
+  margin-left: 0.4rem;
+}
+
+.footer-tagline {
+  font-size: 0.8rem;
+  color: var(--color-olive);
+  max-width: 400px;
+  margin: 0.6rem auto;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin: 0.8rem 0;
+}
+
+.footer-links a {
+  color: var(--color-ink);
+  text-decoration: none;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.footer-links a:hover {
+  color: var(--color-red);
+}
+
+.footer-copy {
+  font-size: 0.7rem;
+  color: var(--color-olive);
+  letter-spacing: 0.05em;
+}
+
 .culture-note {
   display: block;
   font-size: 0.75rem;
@@ -606,9 +675,7 @@ small {
   color: var(--color-olive);
 }
 
-/* =========================================================
-   BUTTONS
-   ========================================================= */
+
 
 button {
   position: relative;
@@ -660,10 +727,6 @@ button:active {
   box-shadow: 1px 1px 0 var(--color-black);
 }
 
-/* =========================================================
-   LINKS
-   ========================================================= */
-
 a {
   color: inherit;
 }
@@ -671,10 +734,6 @@ a {
 a:not(nav a) {
   text-underline-offset: 3px;
 }
-
-/* =========================================================
-   INPUTS
-   ========================================================= */
 
 input,
 select {
@@ -713,10 +772,6 @@ select:focus {
 
   box-shadow: var(--shadow-small);
 }
-
-/* =========================================================
-   FORMS + CARDS
-   ========================================================= */
 
 form,
 .card {
@@ -776,10 +831,6 @@ form {
   gap: 0.55rem;
 }
 
-/* =========================================================
-   LABELS
-   ========================================================= */
-
 label {
   font-family: var(--font-mono);
 
@@ -791,10 +842,6 @@ label {
 
   color: var(--color-olive);
 }
-
-/* =========================================================
-   TAGS
-   ========================================================= */
 
 .tag {
   display: inline-block;
@@ -832,12 +879,6 @@ label {
 
   transform: rotate(-1deg);
 }
-
-/* =========================================================
-   SCRAPBOOK / ARCHIVE HELPERS
-   ========================================================= */
-
-/* Add this class to little metadata pieces */
 
 .archive-meta {
   font-family: var(--font-mono);
@@ -901,19 +942,11 @@ label {
   opacity: 0.55;
 }
 
-/* =========================================================
-   SELECTION
-   ========================================================= */
-
 ::selection {
   background: var(--accent);
 
   color: var(--color-paper);
 }
-
-/* =========================================================
-   SCROLLBAR
-   ========================================================= */
 
 ::-webkit-scrollbar {
   width: 8px;
@@ -926,10 +959,6 @@ label {
 ::-webkit-scrollbar-thumb {
   background: var(--color-ink);
 }
-
-/* =========================================================
-   MOBILE
-   ========================================================= */
 
 @media (max-width: 700px) {
   nav {
@@ -970,10 +999,6 @@ label {
     margin-right: 1.2rem;
   }
 }
-
-/* =========================================================
-   REDUCED MOTION
-   ========================================================= */
 
 @media (prefers-reduced-motion: reduce) {
   *,
