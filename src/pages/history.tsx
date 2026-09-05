@@ -89,7 +89,7 @@ function History() {
       <BackButton />
       <p className="section-label">02 / History</p>
       <h1>
-        Your <span className="accent">Archive.</span>
+        Your <span className="accent">Archive</span>
       </h1>
 
       {loading && (
